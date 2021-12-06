@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   print_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/05 20:35:09 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/06 09:23:22 by jin-lee          ###   ########.fr       */
+/*   Created: 2021/12/06 09:18:35 by jin-lee           #+#    #+#             */
+/*   Updated: 2021/12/06 09:18:51 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
+#include "philo.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
-# include <sys/time.h>
-# include <pthread.h>
-# include "mini_libft.h"
-# include "err_message.h"
-
-/* utils */
-void	pass(void);
-int		print_error(char *message);
-
-int		check_args(int argc, char **argv);
-
-#endif
+int	print_error(char *message)
+{
+	printf("\033[33mError: \033[0m");
+	printf("%s\n", message);
+	return (EXIT_FAILURE);
+}

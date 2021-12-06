@@ -6,7 +6,7 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 20:06:42 by jin-lee           #+#    #+#              #
-#    Updated: 2021/12/06 06:00:37 by jin-lee          ###   ########.fr        #
+#    Updated: 2021/12/06 09:21:47 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,15 @@ SRCS_DIR	= ./srcs \
 			  ./srcs/utils
 
 SRCS		= ./srcs/main.c \
+			  ./srcs/check_args.c \
 			  \
 			  ./srcs/mini_libft/ft_atoi.c \
 			  ./srcs/mini_libft/ft_isdigit.c \
 			  ./srcs/mini_libft/ft_isspace.c \
 			  ./srcs/mini_libft/ft_strlen.c \
 			  \
-			  ./srcs/utils/tools.c
+			  ./srcs/utils/tools.c \
+			  ./srcs/utils/print_error.c
 
 OBJS_DIR	= ./objects
 OBJS		= $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.c=.o)))
