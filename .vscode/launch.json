@@ -6,20 +6,14 @@
 	"configurations": [
 	  {
 		"name": "debug philo",
-		"type": "cppdbg",
+		"type": "lldb",
 		"request": "launch",
 		"program": "${workspaceFolder}/philo",
-		"args": [],
+		"args": ["5", "800", "100", "100", "100"],
 		"stopAtEntry": true,
 		"cwd": "${workspaceFolder}",
 		"environment": [],
 		"externalConsole": false,
-		"osx": {
-		  "MIMode": "lldb"
-		},
-		"linux": {
-		  "MIMode": "gdb"
-		},
 		"preLaunchTask": "Build philo"
 	  }
 	]
