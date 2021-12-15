@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: jin-lee <jin-lee@student.42Seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 20:14:44 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/15 14:48:35 by jin-lee          ###   ########.fr       */
+/*   Updated: 2021/12/15 17:03:31 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,23 @@
 
 void	init_chopstick(t_chopstick *chopstick, int idx)
 {
+	chopstick->mutex_lock = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
+	if (!chopstick->mutex_lock)
+		print_error(ERR_);
+	pthread_mutex_init(chopstick->mutex_lock, NULL);
+
 	chopstick->chopstick_id = idx;
 	chopstick->status = RELEASED;
-	chopstick->mutex_lock = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
-	pthread_mutex_init(chopstick->mutex_lock, NULL);
 }
 
 void	init_arr_philo(t_data *data)
 {
 	int idx;
 
+	data->arr_philo = (t_philo *)malloc(sizeof(t_philo) * data->num_philos);
+	if (!data->arr_philo)
+		print_error(ERR_);
+		
 	idx = -1;
 	while (++idx < data->num_philos)
 	{
@@ -47,14 +54,8 @@ void	init_data(int argc, char **argv, t_data *data)
 		data->must_eat = ft_atoi(argv[5]);
 	}
 	gettimeofday(&(data->g_timestamp), NULL);
-
-	data->arr_philo = (t_philo *)malloc(sizeof(t_philo) * data->num_philos);
 	init_arr_philo(data);
 }
-
-/* ************************************************************************** */
-
-
 
 /* ************************************************************************** */
 

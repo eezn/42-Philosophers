@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: jin-lee <jin-lee@student.42Seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 20:35:09 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/15 12:30:35 by jin-lee          ###   ########.fr       */
+/*   Updated: 2021/12/15 16:33:04 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ typedef struct	s_chopstick t_chopstick;
 struct	s_chopstick
 {
 	int				chopstick_id;
-	
 	int				status;
+	
 	pthread_mutex_t	*mutex_lock;
 };
 
 struct	s_philo
 {
 	int				philo_id;
-	
 	int				status;
+
 	pthread_t		thread;
 	t_chopstick		chopstick;
 };
