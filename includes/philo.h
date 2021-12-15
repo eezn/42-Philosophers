@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 20:35:09 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/15 10:45:41 by jin-lee          ###   ########.fr       */
+/*   Updated: 2021/12/15 12:30:35 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,8 @@
 # define TRUE 1
 # define FALSE 0
 
-/* ************************************************************************** */
-
-typedef struct	s_philo_list	t_philo_list;
-
-struct	s_philo_list
-{
-	t_philo			*head;
-	t_philo			*tail;
-	size_t			count;
-};
-
-/* ************************************************************************** */
+# define ACQUIED 1
+# define RELEASED 0
 
 typedef struct	s_data			t_data;
 typedef struct	s_philo			t_philo;
@@ -44,24 +34,24 @@ typedef struct	s_chopstick t_chopstick;
 
 struct	s_chopstick
 {
-	int				curr_chopstick;
+	int				chopstick_id;
 	
+	int				status;
 	pthread_mutex_t	*mutex_lock;
 };
 
 struct	s_philo
 {
-	int				curr_philo;
-
+	int				philo_id;
+	
+	int				status;
 	pthread_t		thread;
 	t_chopstick		chopstick;
-	t_philo			*next;
-	t_philo			*prev;
 };
 
 struct	s_data
 {
-	int				philosophers;
+	int				num_philos;
 	int				time_to_die;
 	int				time_to_eat;
 	int 			time_to_sleep;
