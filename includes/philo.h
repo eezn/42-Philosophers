@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jin-lee <jin-lee@student.42Seoul.kr>       +#+  +:+       +#+        */
+/*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 20:35:09 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/15 16:33:04 by jin-lee          ###   ########.fr       */
+/*   Updated: 2021/12/17 02:45:34 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@
 # define ACQUIED 1
 # define RELEASED 0
 
+# define ODD 1
+# define EVEN 0
+
 typedef struct	s_data			t_data;
 typedef struct	s_philo			t_philo;
 typedef struct	s_chopstick t_chopstick;
@@ -43,10 +46,10 @@ struct	s_chopstick
 struct	s_philo
 {
 	int				philo_id;
+	int				even_odd;
 	int				status;
 
 	pthread_t		thread;
-	t_chopstick		chopstick;
 };
 
 struct	s_data
@@ -61,6 +64,7 @@ struct	s_data
 	struct timeval	g_timestamp;
 	
 	t_philo			*arr_philo;
+	t_chopstick		*arr_stick;
 };
 
 /* ************************************************************************** */

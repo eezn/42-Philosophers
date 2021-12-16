@@ -7,13 +7,12 @@
 	  {
 		"name": "debug philo",
 
-		/* 
-		Apple Silicon ARM64
+		/* Apple Silicon ARM64 */
 		"type": "lldb",
-		*/
 
 		/* x86_64 */
-		"type": "cppdbg",
+		// "type": "cppdbg",
+		
 		"request": "launch",
 		"program": "${workspaceFolder}/philo",
 		"args": ["5", "800", "100", "100", "5"],

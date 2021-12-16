@@ -6,7 +6,7 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 20:06:42 by jin-lee           #+#    #+#              #
-#    Updated: 2021/12/06 09:21:47 by jin-lee          ###   ########.fr        #
+#    Updated: 2021/12/17 02:57:22 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ $(NAME): $(OBJS)
 	@echo "\033[32m"$(NAME) built successfully."\033[0m"
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
-	@$(CC) $(CDEBUG) $(CFLAGS) -I $(INCS_DIR) -c $^ -o $@
+	@$(CC) $(CDEBUG) $(CFLAGS) -pthread -I $(INCS_DIR) -c $^ -o $@
 
 $(OBJS_DIR):
 	@mkdir -p $@
