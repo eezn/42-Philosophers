@@ -6,7 +6,7 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 20:06:42 by jin-lee           #+#    #+#              #
-#    Updated: 2021/12/17 02:57:22 by jin-lee          ###   ########.fr        #
+#    Updated: 2021/12/17 11:17:59 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS_DIR	= ./srcs \
 
 SRCS		= ./srcs/main.c \
 			  ./srcs/check_args.c \
+			  ./srcs/init_data.c \
 			  \
 			  ./srcs/mini_libft/ft_atoi.c \
 			  ./srcs/mini_libft/ft_isdigit.c \
