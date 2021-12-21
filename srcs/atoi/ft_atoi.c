@@ -6,11 +6,11 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 19:12:04 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/05 20:39:51 by jin-lee          ###   ########.fr       */
+/*   Updated: 2021/12/20 02:10:43 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mini_libft.h"
+#include "philo.h"
 
 static int	is_int64_max_overflow(const char *str)
 {

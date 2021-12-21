@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tools.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/05 20:19:44 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/05 20:21:58 by jin-lee          ###   ########.fr       */
+/*   Created: 2021/12/05 20:39:44 by jin-lee           #+#    #+#             */
+/*   Updated: 2021/12/20 02:10:54 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	pass(void)
+size_t	ft_strlen(const char *str)
 {
-	return ;
+	size_t		len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }

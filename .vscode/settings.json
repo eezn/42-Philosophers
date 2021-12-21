@@ -1,5 +1,6 @@
 {
 	"files.associations": {
-		"mini_libft.h": "c"
+		"mini_libft.h": "c",
+		"philo.h": "c"
 	}
 }

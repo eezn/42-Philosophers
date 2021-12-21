@@ -6,7 +6,7 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 20:06:42 by jin-lee           #+#    #+#              #
-#    Updated: 2021/12/17 11:17:59 by jin-lee          ###   ########.fr        #
+#    Updated: 2021/12/21 17:16:50 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,19 +21,24 @@ endif
 
 INCS_DIR	= ./includes
 SRCS_DIR	= ./srcs \
-			  ./srcs/mini_libft \
-			  ./srcs/utils
+			  ./srcs/atoi \
+			  ./srcs/utils \
 
 SRCS		= ./srcs/main.c \
 			  ./srcs/check_args.c \
 			  ./srcs/init_data.c \
+			  ./srcs/philosophers.c \
+			  ./srcs/actions.c \
+			  ./srcs/get_interval.c \
+			  ./srcs/check_status.c \
+			  ./srcs/print_status.c \
 			  \
-			  ./srcs/mini_libft/ft_atoi.c \
-			  ./srcs/mini_libft/ft_isdigit.c \
-			  ./srcs/mini_libft/ft_isspace.c \
-			  ./srcs/mini_libft/ft_strlen.c \
+			  ./srcs/atoi/ft_atoi.c \
+			  ./srcs/atoi/ft_isdigit.c \
+			  ./srcs/atoi/ft_isspace.c \
+			  ./srcs/atoi/ft_strlen.c \
 			  \
-			  ./srcs/utils/tools.c \
+			  ./srcs/utils/pass.c \
 			  ./srcs/utils/print_error.c
 
 OBJS_DIR	= ./objects

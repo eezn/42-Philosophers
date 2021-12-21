@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/05 20:39:44 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/05 20:41:33 by jin-lee          ###   ########.fr       */
+/*   Created: 2021/12/06 05:59:35 by jin-lee           #+#    #+#             */
+/*   Updated: 2021/12/20 02:10:51 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mini_libft.h"
+#include "philo.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_isspace(int c)
 {
-	size_t		len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	if (c == '\t'
+		|| c == '\n'
+		|| c == '\v'
+		|| c == '\f'
+		|| c == '\r'
+		|| c == ' ')
+		return (1);
+	return (0);
 }
