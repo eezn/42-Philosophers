@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 14:10:13 by jin-lee           #+#    #+#             */
-/*   Updated: 2021/12/21 16:57:30 by jin-lee          ###   ########.fr       */
+/*   Updated: 2021/12/22 20:22:25 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ static int	create_philo(t_data *data, int idx)
 		data->curr_idx = idx;
 		ret = pthread_create(&(data->arr_philo[idx].thread), \
 			NULL, &thread_philo, data);
-		usleep(DELAY);
 		idx += 2;
 	}
 	if (ret)
